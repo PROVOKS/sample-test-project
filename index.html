@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="simpel. — landing page minimalis untuk kerja yang lebih fokus, ringan, dan teratur."
+    />
+    <title>simpel. — Kerja yang lebih fokus</title>
+    <link rel="stylesheet" href="./css/output.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body class="antialiased">
+    <!-- ============ HEADER (semantic + sticky + flexbox) ============ -->
+    <header
+      id="top"
+      class="sticky top-0 z-50 border-b border-black/10 bg-paper/85 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"
+        aria-label="Navigasi utama"
+      >
+        <a href="#top" class="text-lg font-semibold tracking-tight text-ink">
+          simpel<span class="text-accent">.</span>
+        </a>
+
+        <ul
+          id="nav-menu"
+          class="absolute left-0 top-full hidden w-full flex-col gap-1 border-b border-black/10 bg-paper px-6 py-4 sm:static sm:w-auto sm:flex sm:flex-row sm:items-center sm:gap-8 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0"
+        >
+          <li>
+            <a
+              href="#fitur"
+              data-nav-link
+              class="block py-2 text-sm text-black/60 transition-colors hover:text-ink sm:py-0"
+              >Fitur</a
+            >
+          </li>
+          <li>
+            <a
+              href="#tentang"
+              data-nav-link
+              class="block py-2 text-sm text-black/60 transition-colors hover:text-ink sm:py-0"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="#kontak"
+              data-nav-link
+              class="block py-2 text-sm text-black/60 transition-colors hover:text-ink sm:py-0"
+              >Kontak</a
+            >
+          </li>
+          <li class="sm:hidden">
+            <a
+              href="#kontak"
+              class="mt-2 block rounded-full bg-ink px-5 py-2.5 text-center text-sm font-medium text-white"
+              >Mulai sekarang</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="#kontak"
+          class="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent sm:inline-flex"
+        >
+          Mulai sekarang
+        </a>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Buka menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-black/10 sm:hidden"
+        >
+          <svg
+            class="icon-open h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg
+            class="icon-close h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ============ MAIN (semantic) ============ -->
+    <main>
+      <!-- HERO: grid + position (relative/absolute) + flexbox -->
+      <section class="relative overflow-hidden border-b border-black/10">
+        <div
+          class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full border border-black/5"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="pointer-events-none absolute -bottom-40 left-1/4 h-80 w-80 rounded-full border border-accent/10"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-2 md:py-32"
+        >
+          <div>
+            <p
+              class="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-black/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-black/50"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+              dirancang untuk fokus
+            </p>
+
+            <h1
+              class="reveal text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+            >
+              Lebih sedikit.<br />Lebih bermakna.
+            </h1>
+
+            <p class="reveal mt-6 max-w-md text-base leading-relaxed text-black/60">
+              Ruang kerja digital yang bersih, cepat, dan bebas distraksi. Semua yang Anda
+              butuhkan, tanpa semua yang tidak.
+            </p>
+
+            <div class="reveal mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#kontak"
+                class="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent"
+              >
+                Mulai gratis
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="#fitur"
+                class="inline-flex items-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+              >
+                Lihat fitur
+              </a>
+            </div>
+
+            <div class="reveal mt-12 flex items-center gap-6 text-xs text-black/45">
+              <span>Tanpa kartu kredit</span>
+              <span class="h-3 w-px bg-black/15"></span>
+              <span>Siap dalam 2 menit</span>
+            </div>
+          </div>
+
+          <!-- Visual hero: container relative + elemen absolute -->
+          <div class="reveal relative">
+            <div class="aspect-[4/5] rounded-3xl border border-black/10 bg-white"></div>
+            <div
+              class="absolute -bottom-8 -left-8 h-32 w-32 rounded-2xl bg-accent/10"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="absolute -right-5 top-12 h-20 w-20 rounded-full border border-accent/30"
+              aria-hidden="true"
+            ></div>
+
+            <div
+              class="absolute inset-x-7 top-1/2 -translate-y-1/2 rounded-2xl border border-black/10 bg-white p-6 shadow-sm sm:inset-x-10 sm:p-8"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] uppercase tracking-[0.18em] text-black/40"
+                  >Ringkasan</span
+                >
+                <span class="h-2 w-2 rounded-full bg-accent"></span>
+              </div>
+              <div class="mt-7 space-y-3">
+                <div class="h-2 w-3/4 rounded-full bg-black/10"></div>
+                <div class="h-2 w-1/2 rounded-full bg-black/10"></div>
+                <div class="h-2 w-2/3 rounded-full bg-accent/30"></div>
+              </div>
+              <div class="mt-9 flex gap-2">
+                <div class="h-9 flex-1 rounded-lg bg-ink"></div>
+                <div class="h-9 w-9 rounded-lg border border-black/10"></div>
+              </div>
+            </div>
+
+            <span
+              class="absolute bottom-5 right-5 text-[11px] font-medium tracking-widest text-black/35"
+              >01 / 03</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- FITUR: grid 3 kolom + flexbox + position pada kartu -->
+      <section id="fitur" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="reveal mb-14 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">Fitur</p>
+            <h2 class="max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">
+              Yang penting saja.
+            </h2>
+          </div>
+          <p class="max-w-sm text-sm leading-relaxed text-black/55">
+            Tiga hal yang kami jaga tetap sederhana, supaya Anda bisa fokus pada pekerjaan.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article
+            class="reveal relative rounded-2xl border border-black/10 bg-white p-8 transition-colors hover:border-accent/40"
+          >
+            <span class="absolute right-6 top-6 text-[11px] tracking-widest text-black/30"
+              >01</span
+            >
+            <div
+              class="mb-8 flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent"
+            >
+              <svg
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium">Teratur</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/55">
+              Semua tersusun rapi dalam satu tempat. Tidak perlu membuka sepuluh tab untuk
+              memulai.
+            </p>
+          </article>
+
+          <article
+            class="reveal relative rounded-2xl border border-black/10 bg-white p-8 transition-colors hover:border-accent/40"
+          >
+            <span class="absolute right-6 top-6 text-[11px] tracking-widest text-black/30"
+              >02</span
+            >
+            <div
+              class="mb-8 flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent"
+            >
+              <svg
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+                <path d="m3 13 9 5 9-5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium">Ringan</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/55">
+              Halaman cepat, tanpa berat. Dirancang agar tetap nyaman dipakai di perangkat
+              apa pun.
+            </p>
+          </article>
+
+          <article
+            class="reveal relative rounded-2xl border border-black/10 bg-white p-8 transition-colors hover:border-accent/40"
+          >
+            <span class="absolute right-6 top-6 text-[11px] tracking-widest text-black/30"
+              >03</span
+            >
+            <div
+              class="mb-8 flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent"
+            >
+              <svg
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16M4 12h10M4 17h6" />
+                <circle cx="17" cy="12" r="2" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium">Fleksibel</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/55">
+              Sesuaikan dengan cara kerja Anda. Tambahkan atau buang apa saja kapan saja.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- TENTANG: grid 2 kolom, galeri grid + translate, Flexbox pada daftar -->
+      <section id="tentang" class="border-y border-black/10 bg-white">
+        <div class="mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-2">
+          <div class="reveal">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="aspect-square rounded-2xl bg-paper"></div>
+              <div class="aspect-square translate-y-6 rounded-2xl bg-accent/10"></div>
+              <div class="aspect-square -translate-y-6 rounded-2xl bg-accent/10"></div>
+              <div class="aspect-square rounded-2xl bg-paper"></div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <p class="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
+              Tentang
+            </p>
+            <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+              Kesederhanaan adalah fitur.
+            </h2>
+            <p class="mt-6 text-sm leading-relaxed text-black/55">
+              Kami percaya alat yang baik tidak perlu berteriak. Ia hanya perlu bekerja dengan
+              tenang, setiap hari, tanpa membuat Anda berpikir berlebihan.
+            </p>
+
+            <ul class="mt-9 space-y-4">
+              <li class="flex items-start gap-3 text-sm text-black/70">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                Antarmuka yang jernih dan konsisten
+              </li>
+              <li class="flex items-start gap-3 text-sm text-black/70">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                Tidak ada notifikasi yang tidak perlu
+              </li>
+              <li class="flex items-start gap-3 text-sm text-black/70">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                Data Anda tetap milik Anda
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA: flexbox + position dekoratif -->
+      <section id="kontak" class="mx-auto max-w-6xl px-6 py-24">
+        <div
+          class="reveal relative overflow-hidden rounded-3xl bg-ink px-6 py-20 text-center text-white sm:px-12"
+        >
+          <div
+            class="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full border border-white/10"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="pointer-events-none absolute -bottom-24 -right-10 h-64 w-64 rounded-full border border-white/5"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative">
+            <p class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-white/40">
+              Mulai sekarang
+            </p>
+            <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+              Siap bekerja lebih tenang?
+            </h2>
+            <p class="mx-auto mt-5 max-w-md text-sm leading-relaxed text-white/60">
+              Bergabunglah dengan mereka yang memilih ruang kerja yang lebih sederhana.
+              Gratis, tanpa kartu kredit.
+            </p>
+            <a
+              href="mailto:halo@simpel.id"
+              class="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-ink transition-colors hover:bg-white/85"
+            >
+              Hubungi kami <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER (semantic + flexbox) ============ -->
+    <footer class="border-t border-black/10">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div>
+          <a href="#top" class="text-base font-semibold tracking-tight">
+            simpel<span class="text-accent">.</span>
+          </a>
+          <p class="mt-2 text-xs text-black/45">Kerja yang lebih fokus, setiap hari.</p>
+        </div>
+
+        <nav class="flex flex-wrap gap-x-6 gap-y-3" aria-label="Navigasi footer">
+          <a href="#fitur" class="text-xs text-black/55 hover:text-ink">Fitur</a>
+          <a href="#tentang" class="text-xs text-black/55 hover:text-ink">Tentang</a>
+          <a href="#kontak" class="text-xs text-black/55 hover:text-ink">Kontak</a>
+        </nav>
+
+        <p class="text-xs text-black/45">© <span id="year">2026</span> simpel.</p>
+      </div>
+    </footer>
+
+    <!-- Position: fixed -->
+    <button
+      id="to-top"
+      type="button"
+      aria-label="Kembali ke atas"
+      class="fixed bottom-6 right-6 z-40 hidden h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-ink shadow-sm transition-colors hover:border-accent hover:text-accent"
+    >
+      <svg
+        class="h-4 w-4"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5m0 0-6 6m6-6 6 6" />
+      </svg>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Tailwind v4: konfigurasi tema langsung di CSS (tanpa tailwind.config.js) */
+@theme {
+  --color-ink: #111111;
+  --color-paper: #f7f7f5;
+  --color-accent: #4f46e5;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* Animasi reveal dipicu oleh IntersectionObserver di js/main.js */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 700ms ease, transform 700ms ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rule unlayered sengaja dipakai agar menang atas utilitas Tailwind */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+[data-nav-link][aria-current="page"] {
+  color: var(--color-accent);
+}
+
+#menu-toggle[aria-expanded="true"] .icon-open,
+#menu-toggle[aria-expanded="false"] .icon-close {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
